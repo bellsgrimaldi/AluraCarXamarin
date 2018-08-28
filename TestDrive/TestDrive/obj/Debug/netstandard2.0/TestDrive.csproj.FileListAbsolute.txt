@@ -1,0 +1,16 @@
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\bin\Debug\netstandard2.0\TestDrive.deps.json
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\bin\Debug\netstandard2.0\TestDrive.dll
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\bin\Debug\netstandard2.0\TestDrive.pdb
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.csprojResolveAssemblyReference.cache
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.csproj.CoreCompileInputs.cache
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.App.xaml.g.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.Views.AgendamentoView.xaml.g.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.Views.DetalheView.xaml.g.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.Views.ListagemView.xaml.g.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.AssemblyInfoInputs.cache
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.AssemblyInfo.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.dll
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.pdb
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.Views.LoginView.xaml.g.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.Views.MasterDetailView.xaml.g.cs
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive\obj\Debug\netstandard2.0\TestDrive.Views.MasterView.xaml.g.cs

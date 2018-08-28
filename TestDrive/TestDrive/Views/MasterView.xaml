@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestDrive.Views.MasterView"
+             Title="Perfil">
+    <Frame OutlineColor="Silver" Margin="15" VerticalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="João da Silva"></Label>
+            <BoxView HeightRequest="1" HorizontalOptions="Fill" Color="Gray"></BoxView>
+            <Label Text="joao@alura.com.br"></Label>
+            <BoxView HeightRequest="1" HorizontalOptions="Fill" Color="Gray"></BoxView>
+            <Button Text="Perfil"></Button>
+        </StackLayout>
+    </Frame>
+    
+</ContentPage>

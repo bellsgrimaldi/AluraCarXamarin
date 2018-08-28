@@ -1,0 +1,6 @@
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive.iOS\obj\iPhone\Debug\optimized\
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive.iOS\obj\iPhone\Debug\TestDrive.iOS.csprojResolveAssemblyReference.cache
+C:\Users\isabella.grimaldi\Downloads\ProjetosVisualStudio\TestDrive\TestDrive\TestDrive.iOS\obj\iPhone\Debug\TestDrive.iOS.csproj.CoreCompileInputs.cache

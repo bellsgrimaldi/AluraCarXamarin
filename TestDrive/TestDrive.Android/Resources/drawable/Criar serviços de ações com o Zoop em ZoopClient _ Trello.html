@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="description" content="Organize anything, together. Trello is a collaboration tool that organizes your projects into boards. In one glance, know what&#39;s being worked on, who&#39;s working on what, and where something is in a process.">
+  <meta name="viewport" content="maximum-scale=1.0,width=device-width,initial-scale=1.0,user-scalable=0">
+  <meta name="apple-itunes-app" content="app-id=461504587, app-argument=https://trello.com/">
+  <meta name="slack-app-id" content="A074YH40Z">
+  <meta name="robots" content="noarchive">
+  <meta name="referrer" content="origin-when-cross-origin">
+  <title>Criar serviços de ações com o Zoop em ZoopClient | Trello</title>
+  <script type="text/javascript" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/5d4c84b635"></script><script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/nr-spa-1044.min.js.download"></script><script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/bat.js.download"></script><script type="text/javascript" async="" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/f.txt"></script><script type="text/javascript" async="" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/f.txt"></script><script async="" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/gtm.js.download"></script><script async="" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/analytics.js.download"></script><script>var _failed=function(a){a=a.src||a.href;var b=function(a){if(a=/^https?:\/\/[^\/]+/.exec(a))return a[0]},b=b(a)||b(location.href)||"unknown";ga('send','event','Load Failure',b,a)};</script>
+  <!-- New Relic, loaded first and not bundled with anything else for great Apdex justice -->
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/newrelic.32b039151d1d8997eaa7.js.download" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <!-- Google Analytics, load failure tracking, and data load kickoff -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    var page = location.pathname;
+    if(page === "/") page = "/boards";
+    ga('create', 'UA-53826304-2', {
+      cookieDomain: 'trello.com',
+      sampleRate: 1
+    });
+    var versionComponents = 'build-1839'.split('-');
+    ga('set', 'dimension1', versionComponents[0]);
+    ga('set', 'dimension2', versionComponents[1]);
+    ga('send', 'pageview', page);
+    
+    (function(i,c,e){if(!i[e]){i.GlobalSnowplowNamespace=i.GlobalSnowplowNamespace||[];
+    i.GlobalSnowplowNamespace.push(e);i[e]=function(){(i[e].q=i[e].q||[]).push(arguments)
+    };i[e].q=i[e].q||[];}}(window,document,"sp"));
+  </script>
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/snowplow.b1d085917f4b9bfd8306.js.download" async="" crossorigin="anonymous" onerror="_failed(this)"></script>
+  
+  <script type="text/javascript">
+  window.dataLayer=window.dataLayer||[];
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=chlg06CfblVj204fihGEqA&gtm_preview=env-8&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PJ8M5SK');
+  </script>
+  
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/quickload.eeb9abeefeb51e34ea16.js.download" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <script type="text/javascript">
+    window.clientVersion = 'build-1839';
+    window.slackTrelloDomain = 'https://slack-chat.trello.services';
+    window.slackDomain = 'https://slack.com/oauth/authorize';
+    window.trelloForWebsites = 'https://p.trellocdn.com';
+    window.customFieldsId = '56d5e249a98895a9797bebb9';
+    window.firstPartyPluginsOrg = '5a999cd36066c584c097f193';
+
+    window.attachmentsDomain = "https://trello-attachments.s3.amazonaws.com";
+    window.avatarDomain = "https://trello-avatars.s3.amazonaws.com";
+    window.backgroundDomain = "https://trello-backgrounds.s3.amazonaws.com";
+    window.logoDomain = "https://trello-logos.s3.amazonaws.com";
+
+    window.oneDriveClientId = 'f7936f71-2186-4c33-8553-134e287aefdf';
+    window.googleDriveClientId = '28300235456-b801aqbc1i8luet9arr7sgll09t6eep9.apps.googleusercontent.com';
+    window.dropboxClientAppKey = '36ipz29apw2svq8';
+    window.boxClientId = 'zclwcvudmddhz0cscz3w6awtcfs8bne3';
+    window.braintreeClientToken = 'production_xv5hxtpx_p8hfn7hqkwk46fwb';
+    window.avalaraCertcaptureId = '37321';
+    window.avalaraCertcaptureKey = '3UEdifHEQxqVMiL1';
+
+    window.snowplowCloudfrontServer = 'c.trello.com';
+    window.analyticsWebClientEnv = 'PROD';
+    window.launchdarklyKey = '58f55132f1e0bb0cb6b2829e';
+    window.appcuesAccountId = '26999';
+  </script>
+  <script>
+    window.locale = 'pt-BR';
+  </script>
+
+  
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/manifest.6edf9c5ea1230cc8c837.js.download" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/ltp.24bc5f268acbb85f099b.js.download" crossorigin="anonymous" onerror="_failed(this)"></script><style data-styled-components=""></style>
+  
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/locale.pt-BR.fafac33a5ec81df14f3d.js.download" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/app.3e40304d0bf5248227a0.js.download" crossorigin="anonymous" onerror="_failed(this)"></script><style type="text/css">.feedback-link__feedbackLink__2ky-v {
+  color: #4d4d4d;
+  align-items: center;
+  border-radius: 4px;
+  bottom: 24px;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  padding: 3px 8px 3px 3px;
+  right: 24px;
+  text-decoration: none;
+}
+.feedback-link__icon__3DONp {
+  font-size: 16px !important;
+  margin-right: 4px;
+}
+.feedback-link__standard__cxcAn {
+  border: 1px solid #E2E4E6;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+.feedback-link__standard__cxcAn:hover {
+  color: #4d4d4d;
+  background-color: #EDEFF0;
+}
+.feedback-link__standard__cxcAn:active {
+  color: #4d4d4d;
+  background-color: #D6DADC;
+}
+.feedback-link__floating__2Rfc9 {
+  background-color: #A86CC1;
+  box-shadow: 0 1px 3px 0 rgba(235, 90, 70, 0.16);
+  color: white;
+  height: 22px;
+  padding: 5px 11px;
+  position: fixed;
+  z-index: 4;
+}
+@media only screen and (max-width: 711px) {
+  .feedback-link__floating__2Rfc9 {
+    display: none;
+  }
+}
+.feedback-link__floating__2Rfc9 .feedback-link__icon__3DONp {
+  color: white;
+}
+.feedback-link__floating__2Rfc9:hover {
+  background-color: #89609E;
+  color: white;
+}
+.feedback-link__floating__2Rfc9:active {
+  background-color: #6C547B;
+  color: white;
+}
+.feedback-link__floating__2Rfc9:focus {
+  border: 2px solid #5BA4CF;
+  color: white;
+  padding: 3px 9px;
+}
+</style><style type="text/css">.section-header__m-ellipsis__23g6k {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section-header__m-button-no-style__3prYt {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.section-header__m-button-no-style__3prYt,
+.section-header__m-button-no-style__3prYt:hover,
+.section-header__m-button-no-style__3prYt:active,
+.section-header__m-button-no-style__3prYt:focus {
+  background: none;
+}
+.section-header__header__2Z6-2 {
+  align-items: baseline;
+  display: flex;
+  height: 32px;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  padding: 0 0 0 8px;
+}
+.section-header__noMargin__1knk4 {
+  margin: 0;
+}
+.section-header__text__1SpVs {
+  color: #838c91;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  margin-top: 16px;
+  text-transform: uppercase;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 8px 0;
+}
+.section-header__icon__2h8hP {
+  flex: 0 0 auto;
+  margin-left: -8px;
+  position: relative;
+  text-align: center;
+  top: 1px;
+  width: 32px;
+}
+.section-header__button__1bPgl {
+  align-items: center;
+  background-color: #E2E4E6;
+  background-image: none !important;
+  border-radius: 16px;
+  box-shadow: 0 1px 0 0 #C4C9CC;
+  color: #333333;
+  display: flex;
+  font-size: 12px;
+  font-weight: normal;
+  height: 32px;
+  justify-content: center;
+  margin: 0 0 0 8px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+.section-header__button__1bPgl:focus {
+  background-color: #E2E4E6;
+}
+.section-header__button__1bPgl:hover {
+  background-color: #D6DADC;
+  color: #333333;
+}
+.section-header__button__1bPgl:active {
+  background-color: #C4C9CC;
+  box-shadow: 0 1px 0 0 #A5ACB0;
+}
+.section-header__buttonIcon__wDL1A {
+  color: #838C91;
+  margin-left: -6px;
+}
+.section-header__buttonIconSpan__1_a9F {
+  color: currentcolor !important;
+}
+.section-header__buttonText__3Ctjy {
+  margin: 0 4px;
+}
+.section-header__fixedButton__1OgPW {
+  display: flex;
+  height: 0;
+  justify-content: center;
+  left: 0;
+  opacity: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 408px;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
+  transition: 200ms opacity, 200ms -webkit-transform;
+  transition: 200ms transform, 200ms opacity;
+  transition: 200ms transform, 200ms opacity, 200ms -webkit-transform;
+  width: 100%;
+  z-index: 1;
+}
+.section-header__fixedButton__1OgPW .section-header__button__1bPgl {
+  background-color: #61BD4F;
+  box-shadow: 0 1px 0 0 #519839, 0 2px 2px 0 rgba(51, 51, 51, 0.3);
+  color: white;
+  margin: 0;
+}
+.section-header__fixedButton__1OgPW .section-header__button__1bPgl:hover {
+  color: white;
+  background-color: #5AAC44;
+}
+.section-header__fixedButton__1OgPW .section-header__button__1bPgl:active {
+  background-color: #519839;
+  box-shadow: 0 1px 0 0 #49852E, 0 2px 2px 0 rgba(51, 51, 51, 0.3);
+}
+.section-header__fixedButton__1OgPW .section-header__buttonIcon__wDL1A {
+  color: white;
+}
+.section-header__slideEnter__2vk2N,
+.section-header__slideExitActive__1KuEZ {
+  opacity: 0;
+  -webkit-transform: translateY(-424px);
+          transform: translateY(-424px);
+}
+.section-header__slideEnterActive__3sU8Z {
+  opacity: 1;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
+}
+</style><style type="text/css">.tab__tabSection__1qSDc + .tab__tabSection__1qSDc {
+  margin-top: 8px;
+}
+.tab__tabList__3G31t {
+  list-style-type: none;
+}
+.tab__tabList__3G31t:last-child {
+  margin-bottom: 12px;
+}
+.tab__tab__15G2j {
+  margin-bottom: 4px;
+}
+.tab__tabIcon__32Nvj {
+  display: block;
+  flex: 0 0 auto;
+  text-align: center;
+  width: 32px;
+  color: #959DA1;
+}
+.tab__tabIconSpan__jlnEo {
+  color: currentcolor !important;
+}
+.tab__tabLogo__vPHtR {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 8px;
+}
+.tab__tabText__212hs {
+  flex: 1 1 auto;
+}
+.tab__tabLink__3C9rw,
+.tab__tabButton__37WIj {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 24px;
+  overflow: hidden;
+  padding: 4px 8px 4px 0;
+  text-decoration: none;
+}
+.tab__tabLink__3C9rw:hover,
+.tab__tabButton__37WIj:hover {
+  background-color: #EDEFF0;
+}
+.tab__tabLink__3C9rw:active,
+.tab__tabButton__37WIj:active {
+  background-color: #E2E4E6;
+}
+.tab__tabListIndent__2EVi- {
+  color: #838C91;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 4px;
+  padding-left: 28px;
+}
+ul li:first-of-type a.tab__tabListIndent__2EVi- {
+  margin-top: 8px;
+}
+ul li:last-of-type a.tab__tabListIndent__2EVi- {
+  margin-bottom: 16px;
+}
+.tab__selected__1gsiC.tab__tabLink__3C9rw,
+.tab__selected__1gsiC.tab__tabButton__37WIj {
+  background-color: #E4F0F6;
+}
+.tab__selected__1gsiC.tab__tabLink__3C9rw,
+.tab__selected__1gsiC.tab__tabButton__37WIj,
+.tab__selected__1gsiC.tab__tabLink__3C9rw:hover,
+.tab__selected__1gsiC.tab__tabButton__37WIj:hover,
+.tab__selected__1gsiC.tab__tabLink__3C9rw .tab__tabIcon__32Nvj,
+.tab__selected__1gsiC.tab__tabButton__37WIj .tab__tabIcon__32Nvj {
+  color: #0079BF;
+}
+.tab__tabButton__37WIj {
+  cursor: pointer;
+  font-weight: normal;
+  text-align: left;
+  width: 100%;
+}
+.tab__tabButton__37WIj,
+.tab__tabButton__37WIj:hover {
+  color: #838C91;
+}
+.tab__tabButton__37WIj,
+.tab__tabButton__37WIj:hover,
+.tab__tabButton__37WIj:active,
+.tab__tabButton__37WIj:focus {
+  background-image: none;
+  box-shadow: none;
+}
+</style><style type="text/css">.orientation-card__m-ellipsis__e-ak4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.orientation-card__m-button-no-style__19i6Q {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.orientation-card__m-button-no-style__19i6Q,
+.orientation-card__m-button-no-style__19i6Q:hover,
+.orientation-card__m-button-no-style__19i6Q:active,
+.orientation-card__m-button-no-style__19i6Q:focus {
+  background: none;
+}
+.orientation-card__orientationCard__35K3Q {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+.orientation-card__orientationCardBackgroundTop__2iWUQ {
+  flex-direction: column;
+}
+.orientation-card__orientationCardBackgroundTop__2iWUQ span {
+  text-align: center;
+}
+.orientation-card__background__3-Q7m {
+  background-color: #FBEDEB;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 4px 0 0 4px;
+  flex: 0 0 auto;
+  min-height: 130px;
+  width: 88px;
+}
+.orientation-card__backgroundTop__1gBW4 {
+  border-radius: 4px 4px 0 0;
+  min-height: 100px;
+  width: 100%;
+}
+.orientation-card__infoContainer__2lmIm {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 16px;
+  width: 100%;
+}
+.orientation-card__textCenter__3UvT9 {
+  text-align: center;
+}
+.orientation-card__title__1myxb {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+.orientation-card__title__1myxb.orientation-card__textCenter__3UvT9 {
+  padding-bottom: 8px;
+}
+.orientation-card__text__21sdQ {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 10px 0;
+}
+.orientation-card__text__21sdQ.orientation-card__textCenter__3UvT9 {
+  padding-bottom: 6px;
+}
+.orientation-card__dismissButtonIcon__3FJfN {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  margin-top: 8px;
+  right: 8px;
+}
+.orientation-card__dismissButtonIcon__3FJfN,
+.orientation-card__dismissButtonIcon__3FJfN:hover,
+.orientation-card__dismissButtonIcon__3FJfN:active,
+.orientation-card__dismissButtonIcon__3FJfN:focus {
+  background: none;
+}
+.orientation-card__dismissButton__hx47H {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-decoration: underline;
+}
+.orientation-card__dismissButton__hx47H,
+.orientation-card__dismissButton__hx47H:hover,
+.orientation-card__dismissButton__hx47H:active,
+.orientation-card__dismissButton__hx47H:focus {
+  background: none;
+}
+.orientation-card__dismissButton__hx47H:hover {
+  color: #111;
+}
+.orientation-card__dismissButtonBackgroundTop__2zU0P {
+  margin-top: 12px;
+  text-align: center;
+}
+.orientation-card__backgroundName-new-user__3HwfR {
+  background-color: #F7F0FA;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/new-user.c95fada45e5b8a72f20d.svg);
+  height: 136px;
+}
+.orientation-card__backgroundName-no-content__p56Lt {
+  background-color: #FDF5EC;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/no-content.e25c676458c1f4cb280b.svg);
+  height: 108px;
+}
+.orientation-card__backgroundName-up-next__rWRoK {
+  background-color: #FDF5EC;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/up-next.6b180fd2d4526f7925c9.svg);
+}
+.orientation-card__backgroundName-highlight__2kUWD {
+  background-color: #FEF2F9;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/highlights.2bc06dddced721a031de.svg);
+}
+.orientation-card__backgroundName-feedback__2chuy {
+  background-color: #FEF2F9;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/feedback.f60abbf7cb5745c0b532.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[type="text"].orientation-card__createBoardInput__3IVvF {
+  width: 100%;
+}
+.orientation-card__createBoardButton__1zcAX {
+  margin-top: 0;
+  width: 100%;
+}
+</style><style type="text/css">.snackbar__m-ellipsis__3cOGU {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.snackbar__m-button-no-style__G7sjj {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.snackbar__m-button-no-style__G7sjj,
+.snackbar__m-button-no-style__G7sjj:hover,
+.snackbar__m-button-no-style__G7sjj:active,
+.snackbar__m-button-no-style__G7sjj:focus {
+  background: none;
+}
+.snackbar__snackbar__2BMKG {
+  align-items: center;
+  background-color: #333333;
+  border-radius: 4px;
+  bottom: 16px;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 14px;
+  height: 48px;
+  left: 16px;
+  opacity: 1;
+  padding: 8px;
+  position: fixed;
+  -webkit-transform-origin: 50% 80%;
+          transform-origin: 50% 80%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: 0.2s opacity, 0.2s -webkit-transform;
+  transition: 0.2s opacity, 0.2s transform;
+  transition: 0.2s opacity, 0.2s transform, 0.2s -webkit-transform;
+  width: 290px;
+  z-index: 10;
+}
+@media only screen and (max-width: 711px) {
+  .snackbar__snackbar__2BMKG {
+    left: calc(50% - 216px);
+    width: 432px;
+  }
+}
+@media only screen and (max-width: 464px) {
+  .snackbar__snackbar__2BMKG {
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1032px) {
+  .snackbar__snackbar__2BMKG {
+    left: calc(50% - 216px);
+    margin-left: -14px;
+    width: 432px;
+  }
+}
+.snackbar__pinnedBoardsMenu__Yd-aj {
+  left: 16px;
+  margin-left: 0;
+  right: auto;
+  width: 290px;
+}
+@media only screen and (min-width: 1312px) {
+  .snackbar__pinnedBoardsMenu__Yd-aj {
+    left: calc(50% - 216px);
+    margin-left: 126px;
+    width: 432px;
+  }
+}
+.snackbar__fade__1I5lk {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.snackbar__message__rllAe {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #EDEFF0;
+  flex: 1 1 auto;
+  margin: 0 0 0 8px;
+}
+.snackbar__message__rllAe a:link,
+.snackbar__message__rllAe a:visited {
+  color: #B6BBBF;
+}
+.snackbar__message__rllAe a:hover {
+  color: #CDD2D4;
+}
+.snackbar__message__rllAe a:active {
+  color: #D6DADC;
+}
+.snackbar__button__1MTDS {
+  background: none;
+  border-radius: 4px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+.snackbar__button__1MTDS:hover {
+  background: #222222;
+}
+.snackbar__button__1MTDS:active {
+  background: #000000;
+}
+.snackbar__button__1MTDS:focus {
+  background-image: none;
+}
+.snackbar__actionButton__1srmV {
+  background: none;
+  border-radius: 4px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  color: #5BA4CF;
+  font-weight: bold;
+  margin: 0 0 0 8px;
+  padding: 0 8px;
+}
+.snackbar__actionButton__1srmV:hover {
+  background: #222222;
+}
+.snackbar__actionButton__1srmV:active {
+  background: #000000;
+}
+.snackbar__actionButton__1srmV:focus {
+  background-image: none;
+}
+.snackbar__actionButton__1srmV:hover {
+  color: #8BBDD9;
+}
+.snackbar__actionButton__1srmV:active {
+  color: #BCD9EA;
+}
+.snackbar__closeIcon__2X6__ {
+  color: #959DA1 !important;
+  font-size: 16px !important;
+  line-height: 26px !important;
+}
+.snackbar__closeButton__1jpTy {
+  background: none;
+  border-radius: 4px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 3px 0 1px;
+  padding: 0;
+  width: 26px;
+}
+.snackbar__closeButton__1jpTy:hover {
+  background: #222222;
+}
+.snackbar__closeButton__1jpTy:active {
+  background: #000000;
+}
+.snackbar__closeButton__1jpTy:focus {
+  background-image: none;
+}
+.snackbar__closeButton__1jpTy:hover .snackbar__closeIcon__2X6__ {
+  color: #A5ACB0 !important;
+}
+.snackbar__closeButton__1jpTy:active .snackbar__closeIcon__2X6__ {
+  color: #B6BBBF !important;
+}
+</style><style type="text/css">.content-skeleton__contentSkeletonContainer__3tDv- {
+  margin-top: 8px;
+}
+.content-skeleton__cardSkeleton__2RsLA {
+  margin-bottom: 16px;
+}
+.content-skeleton__titleSkeleton__mnn30 {
+  margin: 0 0 8px 20px;
+}
+</style><style type="text/css">.dismiss-animation__revealExpandStart__1VXgd {
+  max-height: 0px;
+  opacity: 0.01;
+  transition-property: opacity, max-height;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out, linear;
+}
+.dismiss-animation__revealExpandEnd__3NdPJ {
+  max-height: 300px;
+  opacity: 1;
+}
+.dismiss-animation__fadeCollapseStart__b6oU- {
+  max-height: 300px;
+  opacity: 1;
+  transition-property: opacity, max-height;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out, linear;
+}
+.dismiss-animation__fadeCollapseEnd__23I4g {
+  max-height: 0px;
+  opacity: 0.01;
+}
+</style><style type="text/css">.highlight-section__m-ellipsis__2aQ1r {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.highlight-section__m-button-no-style__15a5v {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.highlight-section__m-button-no-style__15a5v,
+.highlight-section__m-button-no-style__15a5v:hover,
+.highlight-section__m-button-no-style__15a5v:active,
+.highlight-section__m-button-no-style__15a5v:focus {
+  background: none;
+}
+.highlight-section__highlightSection__sLa3M {
+  padding-bottom: 20px;
+}
+.highlight-section__highlight__1yPmi {
+  display: flex;
+  flex-direction: column;
+  will-change: max-height;
+}
+.highlight-section__highlight__1yPmi + .highlight-section__highlight__1yPmi {
+  padding-top: 16px;
+}
+.highlight-section__highlight__1yPmi:last-child {
+  padding-bottom: 0;
+}
+.highlight-section__showMoreButton__3Z9M4 {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-decoration: underline;
+}
+.highlight-section__showMoreButton__3Z9M4,
+.highlight-section__showMoreButton__3Z9M4:hover,
+.highlight-section__showMoreButton__3Z9M4:active,
+.highlight-section__showMoreButton__3Z9M4:focus {
+  background: none;
+}
+.highlight-section__showMoreButton__3Z9M4:hover {
+  color: #111;
+}
+</style><style type="text/css">.up-next-section__upNextCards__3JGAw {
+  margin: 0 auto;
+  max-width: 1250px;
+}
+.up-next-section__upNextCardList__28ABb {
+  display: flex;
+  flex-direction: column;
+}
+.up-next-section__upNextCardListItem__1YFIJ {
+  box-sizing: border-box;
+  position: relative;
+  will-change: max-height;
+}
+.up-next-section__upNextCardListItem__1YFIJ + .up-next-section__upNextCardListItem__1YFIJ {
+  padding-top: 16px;
+}
+.up-next-section__homeNoUpNextCards__124Xl {
+  margin-top: -24px;
+}
+</style><style type="text/css">.tile__m-ellipsis__1ioGd {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tile__m-button-no-style__94uVw {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.tile__m-button-no-style__94uVw,
+.tile__m-button-no-style__94uVw:hover,
+.tile__m-button-no-style__94uVw:active,
+.tile__m-button-no-style__94uVw:focus {
+  background: none;
+}
+.tile__tile__2tVYP {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+.tile__tile__2tVYP:hover {
+  background-color: #EDEFF0;
+}
+.tile__link__3kNHQ {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  box-sizing: border-box;
+  color: #838C91;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  padding: 8px 40px 8px 8px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+.tile__link__3kNHQ,
+.tile__link__3kNHQ:hover,
+.tile__link__3kNHQ:active,
+.tile__link__3kNHQ:focus {
+  background: none;
+}
+.tile__link__3kNHQ:active {
+  background-color: #E2E4E6;
+}
+.tile__thumbnail__3-pqZ {
+  background-size: cover;
+  border-radius: 4px;
+  display: block;
+  flex: 0 0 auto;
+  height: 28px;
+  margin-right: 8px;
+  width: 32px;
+}
+.tile__text__2h6w7 {
+  display: block;
+  margin-right: 8px;
+  overflow: hidden;
+}
+.tile__linkText__BCNab {
+  color: #838C91;
+}
+.tile__link__3kNHQ:hover .tile__linkText__BCNab,
+.tile__link__3kNHQ:active .tile__linkText__BCNab {
+  color: #4d4d4d;
+}
+.tile__titleText__2TZbr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4d4d4d;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.tile__quietText__EHcBH {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #838C91;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  margin-top: 1px;
+}
+.tile__secondaryButton__1JRAg {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 24px;
+}
+.tile__secondaryButton__1JRAg,
+.tile__secondaryButton__1JRAg:hover,
+.tile__secondaryButton__1JRAg:active,
+.tile__secondaryButton__1JRAg:focus {
+  background: none;
+}
+.tile__tile__2tVYP:hover .tile__secondaryButton__1JRAg:hover {
+  background: #E2E4E6;
+}
+.tile__tile__2tVYP:hover .tile__secondaryButton__1JRAg:active {
+  background: #D6DADC;
+}
+.tile__secondaryButtonIcon__2Xk8h {
+  color: transparent !important;
+  transition: 0.15s color;
+}
+.tile__secondaryButtonIcon__2Xk8h.tile__selected__1yvgN,
+.tile__tile__2tVYP:hover .tile__secondaryButtonIcon__2Xk8h.tile__selected__1yvgN {
+  color: #E6C60D !important;
+  display: block;
+}
+.tile__tile__2tVYP:hover .tile__secondaryButtonIcon__2Xk8h {
+  color: #959DA1 !important;
+  display: block;
+}
+.tile__icon__3uDLJ,
+.tile__buttonIcon__1qcR9 {
+  color: #959DA1 !important;
+  display: flex !important;
+  height: 28px !important;
+  width: 32px !important;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+.tile__buttonIcon__1qcR9 {
+  background-color: #E2E4E6;
+  box-shadow: 0 2px 0 -1px #C4C9CC;
+}
+.tile__link__3kNHQ:hover .tile__buttonIcon__1qcR9,
+.tile__link__3kNHQ:active .tile__buttonIcon__1qcR9 {
+  background-color: #CDD2D4;
+  box-shadow: 0 2px 0 -1px #B6BBBF;
+}
+</style><style type="text/css">.board__boardSection__rUhRs {
+  padding-bottom: 24px;
+}
+</style><style type="text/css">.link__linkSection__2WFin {
+  padding-bottom: 24px;
+}
+</style>
+  <script>(function(b,c){var a=b.createElement("link");a.href=c;a.rel="stylesheet";a.type="text/css";b.getElementsByTagName("head")[0].appendChild(a)})(document,"https://a.trellocdn.com/prgb/dist/images.0a827509b19560815767.css");</script><link href="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/images.0a827509b19560815767.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/core.2687271bc2f1ac1fd602.css" onerror="_failed(this)">
+
+  <link rel="mask-icon" href="https://a.trellocdn.com/prgb/dist/images/pinned-tab-icon.225c8d1cf8bbf74add43.svg" color="#0079BF">
+
+  <!-- For third-generation iPad with high-resolution Retina display and iOS7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-152x152-precomposed.0307bc39ec6c9ff499c8.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-144x144-precomposed.0dbf6daf256eb7678e5e.png">
+  <!-- For iPhone with high-resolution Retina display and iOS7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-120x120-precomposed.a68051b5c9144abe859b.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-114x114-precomposed.7f4a80b64fd8fd99840b.png">
+  <!-- For first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-72x72-precomposed.91a3a04ec68a60903801.png">
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-precomposed.8de2074e8a785dd5d498.png">
+
+  <!-- To enable tab-to-search in Chrome -->
+  <link type="application/opensearchdescription+xml" rel="search" href="https://trello.com/osd.xml">
+<script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/f(1).txt"></script><script src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/f(2).txt" gapi_processed="true"></script><link id="favicon" rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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"></head>
+<body class="window-up">
+  <div id="root" style="display: none;"></div>
+  <div id="classic-body" class="chrome chrome-68 windows body-webkit-scrollbars body-board-view body-custom-board-background body-gray-board-background" style="background-image: url(&quot;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2560x1707/0d346cbbbfdf8d839dae50068287a75f/photo-1533756147285-967602e72ba9&quot;);">
+    <div id="classic">
+      <div id="nocss">
+        Your browser was unable to load all of Trello's resources.  They may have been blocked by your firewall, proxy or browser configuration.<br>
+        Press Ctrl+F5 or Ctrl+Shift+R to have your browser try again and if that doesn't work, check out our <a href="http://help.trello.com/article/771-loading-resources-from-trellos-cdn">troubleshooting guide</a>.
+        <hr>
+      </div>
+      <noscript class="big-message"><h1>To use Trello, please enable JavaScript.</h1></noscript>
+      <div id="boards-drawer"><div class="boards-drawer"><div class="boards-drawer-header"><h3>Quadros</h3></div><div class="board-drawer-content u-fancy-scrollbar" style="max-height: 973px;"><input class="js-search-boards" type="text" name="search-boards" placeholder="Pesquisar quadros por nome…"><div class="js-board-drawer-boards"><div><p class="quiet u-text-align-center hide" style="margin: 6px 4px 0 0; padding: 8px 12px;">Sem Quadros</p><div class="starred-sidebar-boards-list js-starred-boards"><div><div class="sidebar-section-header quiet js-sidebar-section-header bold"><span class="icon-sm icon-star sidebar-section-header-icon"></span><span class="sidebar-section-header-title">Quadros com Estrelas</span><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state">Favorite seus quadros mais importantes para que fiquem mais próximos de você.</div><ul class="sidebar-boards-list js-board-list hide ui-sortable" style=""></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></div></div></div></div><div class="js-recent-boards"><div class=""><div class="sidebar-section-header quiet js-sidebar-section-header bold"><span class="icon-sm icon-clock sidebar-section-header-icon"></span><span class="sidebar-section-header-title">Quadros Recentes</span><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/c0ddb05d1db0311d54784566fa8a5fe8/photo-1533756147285-967602e72ba9.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/jDSANYBS/zoopclient"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/c0ddb05d1db0311d54784566fa8a5fe8/photo-1533756147285-967602e72ba9.jpg&#39;);"></span><span class="compact-board-tile-link-text details has-sub-name"><span class="compact-board-tile-link-text-name" title="ZoopClient">ZoopClient</span><span class="compact-board-tile-link-text-sub-name" title="Projetos Neki-it">Projetos Neki-it</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-close js-remove-board compact-board-tile-link-options-remove" title="Clique para remover este quadro dos seus quadros recentes."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/cdb9671b295b8fcdd38c7a0202109d1f/photo-1533048456949-5778f7653ec7.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/I4q5XkA5/payrentee-integra%C3%A7%C3%A3o-zoop"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/cdb9671b295b8fcdd38c7a0202109d1f/photo-1533048456949-5778f7653ec7.jpg&#39;);"></span><span class="compact-board-tile-link-text details has-sub-name"><span class="compact-board-tile-link-text-name" title="PayRentee - Integração Zoop">PayRentee - Integração Zoop</span><span class="compact-board-tile-link-text-sub-name" title="Projetos Neki-it">Projetos Neki-it</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-close js-remove-board compact-board-tile-link-options-remove" title="Clique para remover este quadro dos seus quadros recentes."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/4005ef445b7293c12cf12e833e3eeaac/photo-1532008915714-b265a3888fef.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/5fbP7xTW/app-laer-operacional"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/4005ef445b7293c12cf12e833e3eeaac/photo-1532008915714-b265a3888fef.jpg&#39;);"></span><span class="compact-board-tile-link-text details has-sub-name"><span class="compact-board-tile-link-text-name" title="APP Laer ( Operacional)">APP Laer ( Operacional)</span><span class="compact-board-tile-link-text-sub-name" title="Projetos Neki-it">Projetos Neki-it</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-close js-remove-board compact-board-tile-link-options-remove" title="Clique para remover este quadro dos seus quadros recentes."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostrar quadros menos ativos (0)</a></div></div></div></div><div class="js-all-boards"><div><div class="sidebar-section-header quiet js-sidebar-section-header bold"><span class="icon-sm icon-board sidebar-section-header-icon"></span><span class="sidebar-section-header-title">Quadros Pessoais</span><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #4BBF6B;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/kSM14I2L/quadro-de-boas-vindas"><span class="compact-board-tile-link-thumbnail" style="background-color: #4BBF6B;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Quadro de Boas-vindas">Quadro de Boas-vindas</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostrar quadros menos ativos (0)</a></div></div></div><div><div class="sidebar-section-header quiet js-sidebar-section-header bold"><a class="dark-hover" href="https://trello.com/projetosnekiit"><span class="icon-sm icon-organization sidebar-section-header-icon"></span><span class="sidebar-section-header-title mod-clickable">Projetos Neki-it</span><span class="icon-sm icon-business-class sidebar-section-header-bc-icon hide js-has-business-class"></span></a><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/4005ef445b7293c12cf12e833e3eeaac/photo-1532008915714-b265a3888fef.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/5fbP7xTW/app-laer-operacional"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/4005ef445b7293c12cf12e833e3eeaac/photo-1532008915714-b265a3888fef.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="APP Laer ( Operacional)">APP Laer ( Operacional)</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/0b11e36a9a2828e9b26d0d6c4747c1dc/photo-1531992460473-db6b4335444d.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/plvBLCaF/app-laer-cliente"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/0b11e36a9a2828e9b26d0d6c4747c1dc/photo-1531992460473-db6b4335444d.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="App Laer Cliente">App Laer Cliente</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #0079BF;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/G3jBBImg/connector"><span class="compact-board-tile-link-thumbnail" style="background-color: #0079BF;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Connector">Connector</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x480/6be5a186a44f011536a75ee39b69fc24/photo-1520858362407-812e1188b1eb.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link light" href="https://trello.com/b/deUNoOmX/milano-pedidos-mobile"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x480/6be5a186a44f011536a75ee39b69fc24/photo-1520858362407-812e1188b1eb.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Milano - Pedidos Mobile">Milano - Pedidos Mobile</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x480/0734dba436920bfa8630de9da6eda54f/photo-1522328130867-8df79ee56d04.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link light" href="https://trello.com/b/8hSHGx6X/milano-sicad"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x480/0734dba436920bfa8630de9da6eda54f/photo-1522328130867-8df79ee56d04.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Milano - SICAD">Milano - SICAD</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/eaf82149e38fba9c9a195fb05eea6a75/photo-1526715058896-23f69a067d99.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/8qY8dIJd/payrentee"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/eaf82149e38fba9c9a195fb05eea6a75/photo-1526715058896-23f69a067d99.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="PayRentee">PayRentee</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/cdb9671b295b8fcdd38c7a0202109d1f/photo-1533048456949-5778f7653ec7.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/I4q5XkA5/payrentee-integra%C3%A7%C3%A3o-zoop"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/cdb9671b295b8fcdd38c7a0202109d1f/photo-1533048456949-5778f7653ec7.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="PayRentee - Integração Zoop">PayRentee - Integração Zoop</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/539e7151cc817c0239b862eadcfa2241/photo-1526576100506-af9d70497856.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/TxSPdG1A/ploarion"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/539e7151cc817c0239b862eadcfa2241/photo-1526576100506-af9d70497856.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Ploarion">Ploarion</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x254/658eaaeb7334e55f541f4dc009cf67c9/photo-1524076678992-7b308df446a3.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/qnBkntJp/rent-me"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x254/658eaaeb7334e55f541f4dc009cf67c9/photo-1524076678992-7b308df446a3.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Rent-ME">Rent-ME</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/c0ddb05d1db0311d54784566fa8a5fe8/photo-1533756147285-967602e72ba9.jpg&#39;);"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/jDSANYBS/zoopclient"><span class="compact-board-tile-link-thumbnail" style="background-image: url(&#39;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/c0ddb05d1db0311d54784566fa8a5fe8/photo-1533756147285-967602e72ba9.jpg&#39;);"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="ZoopClient">ZoopClient</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="Há atividades novas neste quadro."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Clique para adicionar uma estrela ao quadro. Ele vai ficar no alto da lista de quadros."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostrar quadros menos ativos (0)</a></div></div></div></div></div></div><div class="js-board-drawer-buttons"><div><a class="quiet-button js-add-board" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Criar novo quadro…</a><a class="quiet-button js-pin" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Sempre manter este menu aberto.</a><a class="quiet-button hide js-unpin" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Não mantenha este menu aberto.</a><a class="quiet-button js-open-closed-boards" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Ver quadros fechados...</a></div></div></div></div></div>
+      <p id="notification" style="display: none;"></p>
+      <div id="surface">
+        <div id="header"><a class="header-logo js-home-via-logo" href="https://trello.com/" aria-label="Página Inicial do Trello"><span class="header-logo-loading"></span><span class="header-logo-default"></span></a><div class="header-boards-button"><a class="header-btn header-boards js-boards-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="header-btn-icon icon-lg icon-board light"></span><span class="header-btn-text">Quadros</span></a></div><div><a class="header-btn open-search-btn js-open-search-page" href="https://trello.com/search" title="Pesquisar quadros, cartões, membros e times."><span class="header-btn-icon icon-lg icon-search light"></span></a><div class="header-search"><input class="header-search-input js-search-input js-disable-on-dialog disabled-for-dialog" type="text" autocomplete="off" autocorrect="off" spellcheck="false" value="" disabled="disabled"><span class="header-search-icon icon-lg icon-search light js-search-icon"></span><span class="header-search-icon header-search-icon-close icon-lg icon-close light hide js-close-icon js-search-close"></span><a class="header-search-icon header-search-icon-open icon-lg icon-external-link light hide js-open-button js-open-search-page" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></div></div><div><a class="header-btn header-woof woof-hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="taco-talk-small-icon"></span><span class="header-btn-text"><span class="left-arrow"></span><span class="js-phrase">Novidades!</span></span></a></div><div class="header-user"><a class="header-btn js-open-add-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" aria-label="Criar Quadro ou Organização"><span class="header-btn-icon icon-lg icon-add light"></span></a><a class="header-btn header-info js-open-header-info-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" aria-label="Abrir o menu de informações"><span class="header-btn-icon icon-lg icon-information light"></span></a><a class="header-btn header-notifications js-open-header-notifications-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" aria-label="Notificações"><span class="header-btn-icon icon-lg icon-notification light"></span></a><a class="header-btn header-avatar js-open-header-member-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" aria-label="Abrir Menu de Membros"><span class="member"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></span></a></div></div>
+        <!-- If something ever goes really wrong, this is where -->
+        <!-- We're intentionally embedding styling, in case there's a CDN issue -->
+        <!-- The format of the comment is recognized by the server -->
+        <!-- htmlmin:ignore -->
+        
+        <!-- htmlmin:ignore -->
+        <div id="content" tabindex="-1"><div class="board-wrapper is-show-menu"><div class="board-main-content"><div class="board-header u-clearfix js-board-header"><a class="board-header-btn board-header-btn-name js-rename-board" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="board-header-btn-text" dir="auto">ZoopClient</span></a><a class="board-header-btn js-star-board" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Clique para adicionar uma estrela ou removê-la do quadro. Quadros com estrela aparecem no alto da lista de quadros." aria-label="Inserir ou Remover Estrela do Quadro"><span class="icon-sm icon-star board-header-btn-icon"></span></a><span class="board-header-btn-divider"></span><a class="board-header-btn board-header-btn-org-name js-open-org-menu board-header-btn-without-icon" href="https://trello.com/projetosnekiit" data-boardtype="Free"><span class="board-header-btn-text">Projetos Neki-it<span class="org-label">Free</span></span></a><span class="board-header-btn-divider"></span><div class="board-header-btns mod-left"><a class="board-header-btn hide js-open-desc js-fill-desc" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-description board-header-btn-icon"></span></a><a id="permission-level" class="board-header-btn perms-btn js-change-vis" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Visível para membros do time"><span class="board-header-btn-icon icon-sm icon-organization-visible"></span><span class="board-header-btn-text">Visível para o Time</span></a><span class="board-header-btn-divider js-collection-divider hide"></span><a class="board-header-btn hide js-collection" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><img class="board-header-btn-icon icon-sm collection-icon-img dark-icon" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/collections-black.9dc0b9b8f7804172b734.svg"><img class="board-header-btn-icon icon-sm collection-icon-img light-icon" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/collections.0e197fd2ec35638b8d79.svg"></a></div><span class="board-header-btn-divider"></span><div class="board-header-btns mod-left"><div class="board-header-facepile js-fill-facepile js-list-draggable-board-members"><div class="member js-member ui-draggable"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-type admin" title="Nenhum dos membros é administrador deste quadro."></span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="board-header-btns mod-left"><a id="member-count" class="board-header-btn board-header-btn-round pile js-open-show-all-board-members js-fill-board-member-count" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">1</a></div><a class="board-header-btn board-header-btn-round js-open-manage-board-members" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-add-member"></span></a></div><div class="board-header-btns mod-right"><a class="board-header-btn board-header-btn-filter-indicator hide js-filter-cards-indicator" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-filter board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">A filtragem está ativada.</span><span class="icon-sm icon-close board-header-btn-icon-close js-filter-card-clear"></span></a><a class="board-header-btn sub-btn hide js-board-header-subscribed" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-subscribe board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Seguindo</span></a><a class="board-header-btn calendar-btn hide js-calendar" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-calendar board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Calendário</span></a><span class="js-plugin-header-btns"><span class="board-header-plugin-btns hide"></span></span><a class="board-header-btn mod-show-menu js-show-sidebar" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-overflow-menu-horizontal board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Mostrar Menu</span></a></div></div><div class="board-warnings u-clearfix js-board-warnings hide"></div><div class="board-canvas"><div id="board" class="u-fancy-scrollbar js-no-higher-edits js-list-sortable ui-sortable"><div class="js-list list-wrapper" style=""><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown is-subscribe-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Impedimento</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Impedimento" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; word-wrap: break-word; height: 29.1875px;">Impedimento</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">0 cartões</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"></div><a class="open-card-composer js-open-card-composer" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-add"></span><span class="js-add-a-card">Adicionar um cartão</span><span class="js-add-another-card hide">Adicionar outro cartão</span></a></div></div><div class="js-list list-wrapper" style=""><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown is-subscribe-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Bug</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Bug" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; word-wrap: break-word; height: 29.1875px;">Bug</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">0 cartões</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"></div><a class="open-card-composer js-open-card-composer" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-add"></span><span class="js-add-a-card">Adicionar um cartão</span><span class="js-add-another-card hide">Adicionar outro cartão</span></a></div></div><div class="js-list list-wrapper" style=""><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Para Fazer</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Para Fazer" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; word-wrap: break-word; height: 29.1875px;">Para Fazer</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">1 cartão</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details"><div class="list-card-labels js-card-labels"></div><span class="list-card-title js-card-name" dir="auto">Criar serviços de ações com o Zoop</span><div class="badges"><span class="js-badges"><div class="badge" title="Itens da checklist"><span class="badge-icon icon-sm icon-checklist"></span><span class="badge-text">0/2</span></div></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Solte os arquivos a serem carregados.</p><p class="list-card-dropzone-limited">Muitos anexos.</p></a><div class="card-composer hide"><div class="list-card js-composer"><div class="list-card-details u-clearfix"><div class="list-card-labels u-clearfix js-list-card-composer-labels"></div><textarea class="list-card-composer-textarea js-card-title" dir="auto" placeholder="Insira um título para este cartão..." style="overflow: hidden; word-wrap: break-word; resize: none; height: 76.8px;"></textarea><div class="list-card-members js-list-card-composer-members"></div></div></div><div class="cc-controls u-clearfix"><div class="cc-controls-section"><input class="primary confirm mod-compact js-add-card" type="submit" value="Adicionar Cartão"><a class="icon-lg icon-close dark-hover js-cancel" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></div><div class="cc-controls-section mod-right"><a class="icon-lg icon-overflow-menu-horizontal dark-background-hover js-cc-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></div></div></div></div><a class="open-card-composer js-open-card-composer" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="padding-left: 4px;"><span class="icon-sm icon-add"></span><span class="js-add-a-card hide">Adicionar um cartão</span><span class="js-add-another-card">Adicionar outro cartão</span></a></div></div><div class="js-list list-wrapper"><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown is-subscribe-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Fazendo</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Fazendo" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; word-wrap: break-word; height: 29.1875px;">Fazendo</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">0 cartões</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"></div><a class="open-card-composer js-open-card-composer" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-add"></span><span class="js-add-a-card">Adicionar um cartão</span><span class="js-add-another-card hide">Adicionar outro cartão</span></a></div></div><div class="js-list list-wrapper"><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown is-subscribe-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Feito</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Feito" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; word-wrap: break-word; height: 29.1875px;">Feito</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">0 cartões</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"></div><a class="open-card-composer js-open-card-composer" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-add"></span><span class="js-add-a-card">Adicionar um cartão</span><span class="js-add-another-card hide">Adicionar outro cartão</span></a></div></div><div class="js-add-list list-wrapper mod-add is-idle"><form><span class="placeholder js-open-add-list"><span class="icon-sm icon-add"></span>Adicionar outra lista</span><input class="list-name-input" type="text" name="name" placeholder="Insira o título da lista..." autocomplete="off" dir="auto" maxlength="512"><div class="list-add-controls u-clearfix"><input class="primary mod-list-add-button js-save-edit" type="submit" value="Adicionar Lista"><a class="icon-lg icon-close dark-hover js-cancel-edit" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></div></form></div></div></div></div><div class="board-menu js-fill-board-menu"><div class="board-menu-container"><div class="board-menu-tab-content"><div class="board-menu-header js-board-menu-title is-board-menu-default-view is-in-frame"><div class="board-menu-header-content"><a class="board-menu-header-back-button icon-lg icon-back js-pop-widget-view" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Volte."></a><h3 class="board-menu-header-title js-board-menu-title-text">Menu</h3><a class="board-menu-header-close-button icon-lg icon-close js-hide-sidebar" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Feche o menu do quadro."></a></div><hr class="board-menu-header-divider"></div><div class="board-menu-content u-fancy-scrollbar js-board-menu-content-wrapper"><div class="board-menu-content-frame"><p class="error js-file-too-large" style="margin: 12px 0 6px; display:none;">Arquivo grande demais. Limite de 10 MB.</p><ul class="board-menu-navigation"><li class="board-menu-navigation-item mod-background"><a class="board-menu-navigation-item-link js-change-background" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="board-menu-navigation-item-link-icon js-fill-background-preview" style="background-image: url(&quot;https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/c0ddb05d1db0311d54784566fa8a5fe8/photo-1533756147285-967602e72ba9.jpg&quot;);"></span>&nbsp;Alterar Tela de Fundo</a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-card-filter" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-filter board-menu-navigation-item-link-icon"></span>&nbsp;Filtrar Cartões</a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-power-ups" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-power-up board-menu-navigation-item-link-icon"></span>&nbsp;Power-Ups&nbsp;<span class="board-menu-navigation-item-link-count js-enabled-power-up-count"></span><span class="board-menu-navigation-item-new js-power-up-new hide">Novo</span><span class="board-menu-navigation-item-link-warning js-power-up-disable-timer hide"></span><div class="board-menu-navigation-item-link-summary">&nbsp;Calendário, Google Drive e mais...</div></a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-stickers" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-sticker board-menu-navigation-item-link-icon"></span>&nbsp;Stickers</a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-more" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-overflow-menu-horizontal board-menu-navigation-item-link-icon"></span>&nbsp;Mais</a></li></ul><hr><a class="board-menu-section-header js-open-activity" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="board-menu-section-header-icon icon-lg icon-activity"></span><span class="board-menu-section-header-title">Atividade</span><span class="board-menu-section-header-count js-unread-activity-count"></span></a><div class="js-menu-action-list"><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar serviços de Conta Bancária a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:57:57.103Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da7f5f665ff1bd7480ba4" title="10 de agosto de 2018 às 12:00">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar Serviços de transferência bancária a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:57:16.284Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da7ccf2ff9436caa3a57f" title="10 de agosto de 2018 às 12:00">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar Serviços cartão de crédito a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:48:44.271Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da5cca09ac18ce1bec4ab" title="10 de agosto de 2018 às 11:51">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar serviços Transação a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:48:14.521Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da5ae6333db13a7d3cf56" title="10 de agosto de 2018 às 11:50">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar serviços Split de pagamento a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:47:54.779Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da59a32bde1515a611cb3" title="10 de agosto de 2018 às 11:50">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar serviços boleto a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:47:37.627Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da589daf371638179ee6b" title="10 de agosto de 2018 às 11:50">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar serviços do vendedor a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:46:30.635Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da54608e435331d455f69" title="10 de agosto de 2018 às 11:49">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar serviços do comprador a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:46:20.259Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da53c1f12cd53a89e3aed" title="10 de agosto de 2018 às 11:49">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Criar Autenticação a <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:45:59.927Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da5279fbed003a5ea1d5e" title="10 de agosto de 2018 às 11:48">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou <a class="action-card" href="https://trello.com/c/9fQp6UfR">Criar serviços de ações com o Zoop</a> a Para Fazer</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-08-10T14:41:51.143Z" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#action-5b6da42f7044ba8761f74df7" title="10 de agosto de 2018 às 11:44">3 horas atrás</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Bug a este quadro</div><div class="phenom-meta quiet"><span class="date js-hide-on-sending" dt="2018-08-10T14:40:32.964Z" href="" title="10 de agosto de 2018 às 11:43">3 horas atrás</span><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Impedimento a este quadro</div><div class="phenom-meta quiet"><span class="date js-hide-on-sending" dt="2018-08-10T14:40:19.693Z" href="" title="10 de agosto de 2018 às 11:43">3 horas atrás</span><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Feito a este quadro</div><div class="phenom-meta quiet"><span class="date js-hide-on-sending" dt="2018-08-10T14:40:16.987Z" href="" title="10 de agosto de 2018 às 11:43">3 horas atrás</span><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Fazendo a este quadro</div><div class="phenom-meta quiet"><span class="date js-hide-on-sending" dt="2018-08-10T14:40:10.844Z" href="" title="10 de agosto de 2018 às 11:42">3 horas atrás</span><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5a9433a52dca127a8c1cd4e4"><span class="u-font-weight-bold">Vitor de Abreu Freitas</span></span> adicionou Para Fazer a este quadro</div><div class="phenom-meta quiet"><span class="date js-hide-on-sending" dt="2018-08-10T14:40:09.167Z" href="" title="10 de agosto de 2018 às 11:42">3 horas atrás</span><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Enviando…&nbsp;</span></div></div></div><a class="show-more js-fill-activity-button js-open-activity" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir todas as atividades...</a></div></div></div></div></div></div></div>
+        <div id="footer">
+          <div id="contact-us" style="display:none">
+            If you're having trouble loading Trello, <a href="http://help.trello.com/article/736-troubleshooting-browser-issues-with-trello" target="support">check out our troubleshooting guide</a> or <a href="https://trello.com/contact?context=load-failure&amp;source=from%20in%20app%20footer" target="contact">contact us</a>!
+          </div>
+          <div id="footer-chrome" style="display:none"></div>
+        </div>
+      </div>
+      <div class="window-overlay" style="">
+        <div class="window" style="display: block;">
+          <a class="focus-dummy" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a>
+          <div class="window-wrapper js-tab-parent"><a class="icon-lg icon-close dialog-close-button js-close-window" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><div class="card-detail-window u-clearfix"><div class="window-cover hide js-card-cover-box js-open-card-cover-in-viewer"><div class="window-cover-stickers js-display-stickers"></div></div><div class="window-archive-banner hide js-archive-banner"><span class="icon-lg icon-archive window-archive-banner-icon"></span><p class="window-archive-banner-text">Este cartão está arquivado.</p></div><div class="window-archive-banner hide js-archived-list-banner"><span class="icon-lg icon-archive window-archive-banner-icon"></span><p class="window-archive-banner-text">Este cartão está na lista de arquivados.</p></div><div class="window-header mod-card-detail-icons-smaller"><span class="window-header-icon icon-lg icon-card"></span><div class="window-title"><h2 class="card-detail-title-assist js-title-helper" dir="auto">Criar serviços de ações com o Zoop</h2><textarea class="mod-card-back-title js-card-detail-title-input" dir="auto" style="overflow: hidden; word-wrap: break-word; height: 25.9875px;"></textarea></div><div class="window-header-inline-content quiet js-current-list"><p class="u-inline-block u-bottom">na lista <a class="js-open-move-from-header" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Para Fazer</a></p></div><div class="window-header-inline-content hide js-subscribed-indicator-header"><span class="icon-sm icon-subscribe"></span></div></div><div class="window-main-col mod-card-detail-icons-smaller"><div class="card-detail-data u-gutter"><div class="card-detail-item u-clearfix hide js-card-detail-members"><h3 class="card-detail-item-header mod-no-top-margin">Membros</h3><div class="js-card-detail-members-list"><a class="card-detail-item-add-button dark-hover js-details-edit-members"><span class="icon-sm icon-add"></span></a></div></div><div class="card-detail-item card-detail-item-labels u-clearfix hide js-card-detail-labels"><h3 class="card-detail-item-header">Etiquetas</h3><div class="u-clearfix js-card-detail-labels-list js-edit-label"><a class="card-detail-item-add-button dark-hover js-details-edit-labels"><span class="icon-sm icon-add"></span></a></div></div><div class="card-detail-item hide js-card-detail-due-date"><h3 class="card-detail-item-header">Data Entrega</h3><span class="card-detail-badge card-detail-due-date-badge js-card-detail-due-date-badge"><span class="card-detail-badge-due-date-complete-box js-card-detail-due-date-badge-complete"><span class="icon-sm icon-check card-detail-badge-due-date-complete-icon"></span></span> <span class="js-date-text card-detail-due-date-text"></span></span></div><div class="card-detail-item hide js-card-detail-votes"><h3 class="card-detail-item-header">Votos</h3><a class="card-detail-badge is-clickable js-card-detail-votes-badge js-show-votes" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></div><div class="card-detail-item hide js-card-detail-age"><h3 class="card-detail-item-header">Última Atualização</h3><div class="card-detail-badge date mod-last-updated js-card-detail-age-badge"></div></div><div class="js-custom-field-detail-badges custom-field-detail-badges"><div></div></div><div class="plugin-detail-badges js-plugin-badges"><div></div></div><div class="u-clearfix"></div></div><div class="window-module"><div class="window-module-title window-module-title-no-divider"><span class="icon-description icon-lg window-module-title-icon"></span><h3 class="u-inline-block">Descrição</h3><a class="card-detail-item-header-edit hide-on-edit js-show-with-desc js-edit-desc hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Editar</a></div><div class="u-gutter js-hide-on-minimize-desc"><div class="editable" attr="desc"><div class="description-content js-desc-content"><div class="description-content-fade-button"><span class="description-content-fade-button-text">Mostrar descrição completa.</span></div><div class="current markeddown hide-on-edit js-card-desc js-show-with-desc hide" dir="auto"></div><p class="u-bottom js-hide-on-edit js-hide-with-desc"><a class="card-detail-fake-text-area hide-on-edit js-edit-desc js-hide-with-draft" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Adicione uma descrição mais detalhada...</a></p><div class="card-detail-edit edit"><a class="helper js-format-help" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Ajuda para formatação</a><textarea class="field js-description-draft" placeholder="Adicione uma descrição mais detalhada..."></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p><p class="edits-error error">A edição não foi salva.</p></div></div></div></div><div class="js-plugin-card-back-sections"></div><div class="js-plugin-sections"></div><div class="window-module js-trello-attachments-section trello-attachments-section u-clearfix hide"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-board"></span><h3 class="u-inline-block">Anexos do Trello</h3></div><div class="u-gutter"><div class="u-clearfix js-trello-attachments-list"></div><p class="js-show-fewer-trello-attachments hide"><a class="quiet-button js-view-some-trello-attachments" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostrar menos anexos do Trello.</a></p><p class="js-show-more-trello-attachments hide"><a class="quiet-button js-view-all-trello-attachments" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a></p><p><a class="quiet-button js-attach-trello-attachment" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Adicionar anexo do Trello...</a></p></div></div><div class="window-module js-attachments-section u-clearfix mod-card-detail-icons-smaller hide"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-attachment"></span><h3 class="u-inline-block">Anexos</h3></div><div class="u-gutter"><div class="u-clearfix js-attachment-list ui-sortable"></div><p class="js-show-fewer-attachments hide"><a class="quiet-button js-view-some-attachments" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostre menos anexos.</a></p><p class="js-show-more-attachments hide"><a class="quiet-button js-view-all-attachments" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir todos os anexos (-4 ocultos)</a></p><p class="js-show-with-attachments hide"><a class="quiet-button js-attach" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Adicionar um anexo...</a></p></div></div><div class="checklist-list window-module js-checklist-list js-no-higher-edits ui-sortable"><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar Autenticação</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar serviços do comprador</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar serviços do vendedor</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto" style="overflow: hidden; word-wrap: break-word; resize: none; height: 85.9875px;"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"><div class="checklist-item"><div class="checklist-item-checkbox enabled js-toggle-checklist-item"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div><div class="checklist-item-details non-empty js-checkitem editable" attr="name"><div class="checklist-item-row js-checkitem-row current hide-on-edit"><span class="checklist-item-details-text markeddown js-checkitem-name">Criar serviço para documento cadastrado</span><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div><div class="checklist-item-menu-wrapper hide-on-edit"><div class="checklist-item-menu js-open-menu"><span class="icon-sm icon-overflow-menu-horizontal"></span></div></div><div class="edit options-menu"><textarea class="field full single-line js-checkitem-input" type="text"></textarea></div></div></div><div class="checklist-item"><div class="checklist-item-checkbox enabled js-toggle-checklist-item"><span class="icon-sm icon-check checklist-item-checkbox-check"></span></div><div class="checklist-item-details non-empty js-checkitem editable" attr="name"><div class="checklist-item-row js-checkitem-row current hide-on-edit"><span class="checklist-item-details-text markeddown js-checkitem-name">Listar documentos de um vendedor</span><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div><div class="checklist-item-menu-wrapper hide-on-edit"><div class="checklist-item-menu js-open-menu"><span class="icon-sm icon-overflow-menu-horizontal"></span></div></div><div class="edit options-menu"><textarea class="field full single-line js-checkitem-input" type="text"></textarea></div></div></div></div><div class="checklist-new-item u-gutter js-new-checklist-item focus"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar serviços boleto</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar serviços Split de pagamento</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar serviços Transação</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar Serviços cartão de crédito</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar Serviços de transferência bancária</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div><div class="checklist"><div class="window-module-title window-module-title-no-divider u-clearfix ed grab"><span class="window-module-title-icon icon-lg icon-checklist"></span><div class="editable non-empty checklist-title" attr="name"><h3 class="current hide-on-edit" dir="auto">Criar serviços de Conta Bancária</h3><div class="window-module-title-options"><a class="hide hide-on-edit quiet js-show-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Mostrar itens verificados (0)</a><a class="hide hide-on-edit quiet js-hide-checked-items" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" style="margin: 0 8px;">Ocultar itens concluídos</a><a class="hide-on-edit quiet js-confirm-delete" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Excluir…</a></div><div class="edit edit-heavy"><textarea class="field full single-line" dir="auto"></textarea></div><p class="edits-warning quiet">Você tem edições não salvas neste campo. <a class="js-view-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Exibir edições</a> - <a class="js-discard-edits" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Descartar</a></p></div></div><div class="checklist-progress"><span class="checklist-progress-percentage js-checklist-progress-percent">0%</span><div class="checklist-progress-bar"><div class="checklist-progress-bar-current js-checklist-progress-bar" style="width: 0%;"></div></div><span class="checklist-completed-text hide quiet js-completed-message">Todos os outros itens na checklist estão completos!</span></div><div class="checklist-items-list js-checklist-items-list js-no-higher-edits ui-sortable"></div><div class="checklist-new-item u-gutter js-new-checklist-item"><textarea class="checklist-new-item-text js-new-checklist-item-input" placeholder="Adicionar item..." style="overflow: hidden; word-wrap: break-word; height: 38.4px;"></textarea><div class="checklist-add-controls u-clearfix"><input class="primary confirm mod-submit-edit js-add-checklist-item" type="submit" value="Adicionar"><a class="icon-lg icon-close dark-hover cancel js-cancel-checklist-item" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"></a><a class="checklist-add-controls-option options-menu dark-hover js-open-emoji-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-emoji"></span></a><a class="checklist-add-controls-option options-menu dark-hover js-open-mention-selector" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-mention"></span></a></div></div><div class="checklist-limit-warning u-gutter js-new-checklist-item-limit-exceeded hide"><span class="checklist-limit-warning-text">Muitos itens neste checklist. Remova alguns para adicionar mais.</span></div></div></div><div class="window-module add-comment-section"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-comment"></span><h3>Adicionar Comentário</h3><span class="editing-members js-editing-members hide"></span></div><div class="new-comment js-new-comment mod-card-back"><div class="member member-no-menu"><span class="member-initials" title="Vitor de Abreu Freitas (vitordeabreufreitas)">VF</span><span class="member-gold-badge" title="Este membro tem Trello Gold."></span></div><form><div class="comment-frame"><div class="comment-box"><textarea class="comment-box-input js-new-comment-input" placeholder="Escrever um comentário..." tabindex="1" dir="auto" style="overflow: hidden; word-wrap: break-word; height: 96.6px;"></textarea><div class="comment-box-options"><a class="comment-box-options-item js-comment-add-attachment" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Adicionar um anexo..."><span class="icon-sm icon-attachment"></span></a><a class="comment-box-options-item js-comment-mention-member" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Mencionar um membro…"><span class="icon-sm icon-mention"></span></a><a class="comment-box-options-item js-comment-add-emoji" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Adicionar emoji..."><span class="icon-sm icon-emoji"></span></a><a class="comment-box-options-item js-comment-add-card" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Adicionar cartão..."><span class="icon-sm icon-card"></span></a></div></div></div><div class="comment-controls u-clearfix"><input class="primary confirm mod-no-top-bottom-margin js-add-comment" tabindex="3" type="submit" value="Salvar"><span class="comment-subscribe is-clickable is-subscribed js-comment-subscribe is-visible"><span class="comment-subscribe-box"><span class="icon-sm icon-check comment-subscribe-icon"></span></span><div class="comment-subscribe-description">Seguir este cartão</div></span></div></form><div class="comment-too-long-warning"><p>Seu comentário é muito longo. Você pode adicioná-lo como um anexo de texto ou ele será truncado.</p><input class="primary js-attach-comment" type="submit" value="Adicionar como Anexo" tabindex="4"><input class="js-truncate-comment" type="submit" value="Truncar" tabindex="5"></div></div></div><div class="window-module mod-card-detail-icons-smaller"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-activity"></span><h3>Atividade</h3><div class="window-module-title-options"><a class="quiet js-show-details" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostrar Detalhes</a><a class="quiet hide js-hide-details" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Ocultar Detalhes</a></div></div><div class="js-list-actions mod-card-back"></div><div class="spinner loading js-loading-card-actions" style="display: none;"></div><p class="u-bottom"><a class="show-more hide js-show-all-actions" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Mostrar todas as ações...</a></p></div></div><div class="window-sidebar"><div class="window-module u-clearfix"><h3 class="mod-no-top-margin">Adicionar ao cartão</h3><div class="u-clearfix card-detail-section-mini-buttons"><a class="button-link card-detail-section-mini-button js-change-card-members" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Membros"><span class="icon-sm icon-member"></span><span class="card-detail-section-mini-button-text">Membros</span></a><a class="button-link card-detail-section-mini-button js-edit-labels" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Etiquetas"><span class="icon-sm icon-label"></span><span class="card-detail-section-mini-button-text">Etiquetas</span></a><a class="button-link card-detail-section-mini-button js-add-checklist-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Checklist"><span class="icon-sm icon-checklist"></span><span class="card-detail-section-mini-button-text">Checklist</span></a><a class="button-link card-detail-section-mini-button js-add-due-date" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Data Entrega"><span class="icon-sm icon-clock"></span><span class="card-detail-section-mini-button-text">Data Entrega</span></a><a class="button-link card-detail-section-mini-button js-attach" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Anexo"><span class="icon-sm icon-attachment"></span><span class="card-detail-section-mini-button-text">Anexo</span></a></div></div><div class="js-plugin-buttons"><div class="window-module u-clearfix hide"><h3 class="">Power-Ups</h3><div class="u-clearfix js-button-list card-detail-section-mini-buttons"></div></div></div><div class="window-module other-actions u-clearfix"><h3 class="mod-no-top-margin">Ações</h3><div class="u-clearfix card-detail-section-mini-buttons"><a class="button-link card-detail-section-mini-button js-move-card" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Mover"><span class="icon-sm icon-move"></span><span class="card-detail-section-mini-button-text">Mover</span></a><a class="button-link card-detail-section-mini-button js-copy-card" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Copiar"><span class="icon-sm icon-card"></span><span class="card-detail-section-mini-button-text">Copiar</span></a><span class="js-subscribe-sidebar-button hide"></span><a class="button-link toggle-button js-subscribe" title="Seguir o cartão para receber notificações quando houver mudanças." href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#"><span class="icon-sm icon-subscribe"></span>&nbsp;Seguir<span class="on"><span class="icon-sm icon-check light"></span></span></a><span class="js-vote-sidebar-button hide"></span><hr><a class="button-link card-detail-section-mini-button js-archive-card" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Arquivar"><span class="icon-sm icon-archive"></span><span class="card-detail-section-mini-button-text">Arquivar</span></a><a class="button-link card-detail-section-mini-button js-unarchive-card hide" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Enviar ao quadro"><span class="icon-sm icon-refresh"></span><span class="card-detail-section-mini-button-text">Enviar ao quadro</span></a><a class="button-link card-detail-section-mini-button js-delete-card hide negate" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#" title="Excluir"><span class="icon-sm icon-remove"></span><span class="card-detail-section-mini-button-text">Excluir</span></a></div></div><div class="window-module u-clearfix"><p class="quiet u-bottom"><a class="quiet-button js-more-menu" href="https://trello.com/c/9fQp6UfR/1-criar-servi%C3%A7os-de-a%C3%A7%C3%B5es-com-o-zoop#">Compartilhar e mais...</a></p></div></div><p class="dropzone">Solte os arquivos a serem carregados.</p><p class="dropzone-limited attachments-per-card">Muitos anexos neste cartão.</p><p class="dropzone-limited attachments-per-board">Muitos anexos neste quadro.</p></div></div>
+        </div>
+      </div>
+      <div class="pop-over" style="left: 903.2px; top: 274.4px;"></div>
+      <div class="tooltip-container">
+      </div>
+      <div id="clipboard-container" style="display: none;"></div>
+    </div>
+  </div><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/activityi.html"></iframe>
+
+
+<img height="1" width="1" style="display:none" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/tr"><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.3926434477212144"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.12380943340561901" width="0" height="0" alt="" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/0"></div><iframe aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="./Criar serviços de ações com o Zoop em ZoopClient _ Trello_files/iframe.html" style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;"></iframe><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none 0s ease 0s; height: 0px !important; min-height: 0px !important; width: 84px; font-family: &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; white-space: pre-wrap; line-height: 19px;" class="autosizejs" id="autosizejs"></textarea></body></html>
